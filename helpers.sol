@@ -12,7 +12,7 @@ contract Helpers {
 
     //Checks if two strings are equal by comparing their hashes. Most efficient compare function, when amount of characters isn't large
     //Have yet to test when you get diminishing returns on gas cost, but as character amount rises, other string compare functions become more efficient
-    function stringsEqual(string x, string y) returns (bool) {
-	    return sha3(x) == sha3(y) ? true : false;
+    function stringsEqual(string _a, string _b) returns (bool) {
+	    return sha3(_a) == sha3(_b) ? true : false;
 	}
 }
