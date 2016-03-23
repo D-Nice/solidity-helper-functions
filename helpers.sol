@@ -9,13 +9,13 @@ contract DNiceHelpers {
             if (!success)
     	        _receiver.call.value(_amtToSend); //May add .gas limit to set a max in case of parasitic contracts, see commented out method below 
                 //_receiver.call.value(_amtToSend).gas(maxGashere);
-	   }
-	}
+		}
+    }
 
     //Checks if two strings are equal by comparing their hashes. Most efficient compare function, when amount of characters isn't large
     //Have yet to test when you get diminishing returns on gas cost, but as character amount rises, other string compare functions become more efficient
     function stringsEqual(string _a, string _b) returns (bool) {
-	    return sha3(_a) == sha3(_b) ? true : false;
+    	return sha3(_a) == sha3(_b) ? true : false;
 	}
 	
 	//The following is a combination of functions to recursively floor round an integer:
